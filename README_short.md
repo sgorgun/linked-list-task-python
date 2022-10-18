@@ -1,19 +1,15 @@
-# Linked List (Python)
+# Linked List
 
-Set of programming assignments that are designed to test knowledge of linked list data structure.
+## Purpose
 
-## Problem 1: Create Linked List using a given array of values
+The coding exercises are designed to test knowledge of the following concepts:
+* Basic data structure for linked list elements
+* Linked list operations
 
-Given an array of values, return a linked list with all the values (its head element).
+## Overview
 
-## Problem 2: Remove Linked List elements by value
-
-Given the `head` of a linked list and an integer `value`, remove all the nodes of the linked list that has `LinkedListNode.value == value`, and return *the new head*.
-
-## Problem 3: Reverse a given Linked List
-
-Given the `head` of a linked list, reverse the list, and return the reversed list's head.
-
-## Problem 4: Find the middle node of a given linked list
-
-Given the `head` of a linked list, return *the middle node of the linked list*.
+The coding exercises cover the following practical problems:
+* Creating a linked list using given values
+* Removing elements from a linked list by value
+* Reversing a linked list
+* Finding the middle element of a linked list

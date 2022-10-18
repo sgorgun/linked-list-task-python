@@ -1,11 +1,26 @@
-# Linked List (Python)
+# Linked List
 
-Set of programming assignments that are designed to test knowledge of linked list data structure.
+## Purpose
 
-### Basic data structure for representing linked list
+The coding exercises are designed to test knowledge of the following concepts:
+* Basic data structure for linked list elements
+* Linked list operations
 
-You may assume that for all programming assignments within this problem set the following data class
-will be used to represent elements of linked list:
+## Overview
+
+The coding exercises cover the following practical problems:
+* Creating a linked list using given values
+* Removing elements from a linked list by value
+* Reversing a linked list
+* Finding the middle element of a linked list
+
+## Coding exercises
+
+### Exercise 1: Create Linked List using a given array of values
+
+#### Linked List elements
+
+The following snippet contains the very basic data structure that could be used for representing Linked List elements. Of course the class could be expanded with additional information if needed.
 
 ```python
 class LinkedListNode:
@@ -20,7 +35,8 @@ class LinkedListNode:
         self.next_element = next_element
 ```
 
-The implementation above can be found within `tasks/linked_list_node.py` file.
+You may assume that for all programming assignments within this set of coding exercises the following data class
+will be used to represent elements of linked list. The implementation above can be found within `tasks/linked_list_node.py` file.
 
 For example the following linked list could be created using the snippet below:
 
@@ -35,8 +51,7 @@ b = LinkedListNode(value=107, next_element=a)
 c = LinkedListNode(value=5, next_element=b)
 ```
 
-
-## Problem 1: Create Linked List using a given array of values
+#### Problem statement
 
 Given an array of values, return a linked list with all the values (its head element).
 
@@ -51,10 +66,12 @@ graph LR;
     style A fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
+<br/>
+
 Please use a template for the implementation (`tasks/linked_list:create_linked_list`).
 
 
-## Problem 2: Remove Linked List elements by value
+### Exercise 2: Remove Linked List elements by value
 
 Given the `head` of a linked list and an integer `value`, remove all the nodes of the linked list that has `LinkedListNode.value == value`, and return *the new head*.
 
@@ -88,10 +105,12 @@ Input: []
 
 Expected result: []
 
+<br/>
+
 Please use a template for the implementation (`tasks/linked_list:remove_values`).
 
 
-## Problem 3: Reverse a given Linked List
+### Exercise 3: Reverse a given Linked List
 
 Given the `head` of a linked list, reverse the list, and return the reversed list's head.
 
@@ -128,11 +147,12 @@ Input: []
 
 Expected result: []
 
+<br/>
 
 Please use a template for the implementation (`tasks/linked_list:reverse_linked_list`).
 
 
-## Problem 4: Find the middle node of a given linked list
+### Exercise 4: Find the middle node of a given linked list
 
 Given the `head` of a linked list, return *the middle node of the linked list*.
 
@@ -166,5 +186,6 @@ Input: []
 
 Expected result: []
 
+<br/>
 
 Please use a template for the implementation (`tasks/linked_list:get_middle_node`).
