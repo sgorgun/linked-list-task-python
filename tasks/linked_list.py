@@ -7,18 +7,10 @@ from tasks.linked_list_node import LinkedListNode
 
 
 def create_linked_list(values: List[int]) -> Optional[LinkedListNode]:
-    """Returns a head element of the linked list for given values.
-
-    NOTE: returns None, if a given list is empty.
-
-    Args:
-        values: List, values that should be inserted into the result linked list.
-
-    Returns:
-        LinkedListNode, the head element.
-    """
-    pass
-
+    head = None
+    for i in range(len(values)-1, -1, -1):
+        head = LinkedListNode(values[i], head)
+    return head
 
 def remove_values(head: Optional[LinkedListNode], value_to_remove: int) -> Optional[LinkedListNode]:
     """Returns a head element of the new linked list after removal of all 'value_to_remove' nodes.
@@ -50,15 +42,12 @@ def reverse_linked_list(head: Optional[LinkedListNode]) -> Optional[LinkedListNo
 
 
 def get_middle_node(head: Optional[LinkedListNode]) -> Optional[LinkedListNode]:
-    """Returns the middle element of a given linked list.
+    if not head:
+        return head
 
-    NOTE: If there are two middle nodes, returns the second middle node.
-    NOTE: returns None, if a given linked list is empty.
+    rabbit, turtle = head, head
+    while rabbit and rabbit.next_element:
+        rabbit = rabbit.next_element.next_element
+        turtle = turtle.next_element
 
-    Args:
-        head: LinkedListNode, the head element of a given linked list.
-
-    Returns:
-        LinkedListNode, the middle element (node).
-    """
-    pass
+    return turtle
