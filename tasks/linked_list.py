@@ -24,7 +24,17 @@ def remove_values(head: Optional[LinkedListNode], value_to_remove: int) -> Optio
     Returns:
         LinkedListNode, the head element after the removal.
     """
-    pass
+    while head and head.value == value_to_remove:
+        head = head.next_element
+
+    current = head
+    while current and current.next_element:
+        if current.next_element.value == value_to_remove:
+            current.next_element = current.next_element.next_element
+        else:
+            current = current.next_element
+
+    return head
 
 
 def reverse_linked_list(head: Optional[LinkedListNode]) -> Optional[LinkedListNode]:
@@ -38,7 +48,15 @@ def reverse_linked_list(head: Optional[LinkedListNode]) -> Optional[LinkedListNo
     Returns:
         LinkedListNode, the head element after the reversal.
     """
-    pass
+    prev = None
+    current = head
+    while current:
+        next_element = current.next_element
+        current.next_element = prev
+        prev = current
+        current = next_element
+
+    return prev
 
 
 def get_middle_node(head: Optional[LinkedListNode]) -> Optional[LinkedListNode]:
